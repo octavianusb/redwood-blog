@@ -19376,6 +19376,7 @@ __metadata:
     "@redwoodjs/core": "npm:8.6.1"
     "@redwoodjs/project-config": "npm:8.6.1"
     prettier-plugin-tailwindcss: "npm:^0.5.12"
+    vite-plugin-node-polyfills: "npm:^0.23.0"
   languageName: unknown
   linkType: soft
 
@@ -21783,7 +21784,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-node-polyfills@npm:0.23.0":
+"vite-plugin-node-polyfills@npm:0.23.0, vite-plugin-node-polyfills@npm:^0.23.0":
   version: 0.23.0
   resolution: "vite-plugin-node-polyfills@npm:0.23.0"
   dependencies:
