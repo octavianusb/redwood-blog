@@ -5598,6 +5598,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@redwoodjs/cli-data-migrate@npm:8.6.1":
+  version: 8.6.1
+  resolution: "@redwoodjs/cli-data-migrate@npm:8.6.1"
+  dependencies:
+    "@redwoodjs/babel-config": "npm:8.6.1"
+    "@redwoodjs/project-config": "npm:8.6.1"
+    chalk: "npm:4.1.2"
+    dotenv-defaults: "npm:5.0.2"
+    execa: "npm:5.1.1"
+    fs-extra: "npm:11.2.0"
+    listr2: "npm:7.0.2"
+    terminal-link: "npm:2.1.1"
+    yargs: "npm:17.7.2"
+  bin:
+    up: ./dist/bin.js
+  checksum: 10c0/024c404a1f7748c6c5273ebf2a36c1b096092ed29332466979d4a6877a93dcbfdbfaf57a94127494ac04d18c169d85715e53cd1940acc6eec9d13dfe27a5fc6f
+  languageName: node
+  linkType: hard
+
 "@redwoodjs/cli-helpers@npm:8.6.1":
   version: 8.6.1
   resolution: "@redwoodjs/cli-helpers@npm:8.6.1"
@@ -19400,6 +19419,7 @@ __metadata:
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
     "@redwoodjs/auth-dbauth-setup": "npm:8.6.1"
+    "@redwoodjs/cli-data-migrate": "npm:8.6.1"
     "@redwoodjs/cli-storybook-vite": "npm:8.6.1"
     "@redwoodjs/core": "npm:8.6.1"
     "@redwoodjs/project-config": "npm:8.6.1"
