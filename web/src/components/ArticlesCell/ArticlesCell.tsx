@@ -25,7 +25,7 @@ export const Failure = ({ error }: CellFailureProps<ArticlesQueryVariables>) => 
 
 export const Success = ({ articles }: CellSuccessProps<ArticlesQuery, ArticlesQueryVariables>) => {
     return (
-        <div className="space-y-10">
+        <div className="space-y-10 max-w-4xl mx-auto">
             {articles.map((article) => (
                 <Article key={article.id} article={article} />
             ))}

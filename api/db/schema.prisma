@@ -6,37 +6,47 @@
 
 
 generator client {
-  provider = "prisma-client-js"
+    provider = "prisma-client-js"
 }
 
 datasource db {
-  provider  = "postgresql"
-  url       = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL")
+    provider  = "postgresql"
+    url       = env("DATABASE_URL")
+    directUrl = env("DIRECT_URL")
 }
 
 model Post {
-  id        Int       @id @default(autoincrement())
-  title     String
-  body      String
-  createdAt DateTime  @default(now())
+    id        Int       @id @default(autoincrement())
+    title     String
+    body      String
+    comments  Comment[]
+    createdAt DateTime  @default(now())
 }
 
 model Contact {
-  id        Int       @id @default(autoincrement())
-  name      String
-  email     String
-  message   String
-  createdAt DateTime  @default(now())
+    id        Int       @id @default(autoincrement())
+    name      String
+    email     String
+    message   String
+    createdAt DateTime  @default(now())
 }
 
 model User {
-  id                  Int       @id @default(autoincrement())
-  email               String    @unique
-  hashedPassword      String
-  salt                String
-  resetToken          String?
-  resetTokenExpiresAt DateTime?
-  createdAt           DateTime @default(now())
-  updatedAt           DateTime @updatedAt
+    id                  Int       @id @default(autoincrement())
+    email               String    @unique
+    hashedPassword      String
+    salt                String
+    resetToken          String?
+    resetTokenExpiresAt DateTime?
+    createdAt           DateTime @default(now())
+    updatedAt           DateTime @updatedAt
+}
+
+model Comment {
+    id          Int         @id @default(autoincrement())
+    name        String
+    body        String
+    post        Post        @relation(fields: [postId], references: [id])
+    postId      Int
+    createdAt   DateTime    @default(now())
 }
