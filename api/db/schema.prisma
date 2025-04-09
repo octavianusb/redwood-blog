@@ -40,6 +40,7 @@ model User {
     resetTokenExpiresAt DateTime?
     createdAt           DateTime @default(now())
     updatedAt           DateTime @updatedAt
+    roles               String @default("moderator")
 }
 
 model Comment {
