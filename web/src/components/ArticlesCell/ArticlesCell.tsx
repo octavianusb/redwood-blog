@@ -11,6 +11,9 @@ export const QUERY: TypedDocumentNode<ArticlesQuery, ArticlesQueryVariables> = g
             title
             body
             createdAt
+            user {
+                email
+            }
         }
     }
 `;

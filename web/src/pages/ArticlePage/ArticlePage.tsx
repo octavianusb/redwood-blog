@@ -1,15 +1,15 @@
-import { Metadata } from '@redwoodjs/web'
+import { Metadata } from '@redwoodjs/web';
 
-import ArticleCell from 'src/components/ArticleCell'
+import ArticleCell from 'src/components/ArticleCell';
 
 const ArticlePage = ({ id }) => {
-  return (
-    <>
-      <Metadata title="Article" description="Article page" />
+    return (
+        <>
+            <Metadata title="Article" description="Article page" />
 
-      <ArticleCell id={id} />
-    </>
-  )
-}
+            <ArticleCell id={id} />
+        </>
+    );
+};
 
-export default ArticlePage
+export default ArticlePage;
